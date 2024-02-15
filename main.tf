@@ -5,9 +5,9 @@ resource "random_string" "network_peering_suffix" {
   length  = 4
 }
 
-#####==============================================================================
-##### Manages a network peering within GCE.
-#####==============================================================================
+#--------------------------------------------------------------------------------
+# Manages a network peering within GCE.
+#--------------------------------------------------------------------------------
 resource "google_compute_network_peering" "local_network_peering" {
   count                = var.peering_enabled ? 1 : 0
   name                 = format("%s-peering-%s", var.vpc_1_name, var.vpc_2_name)
@@ -24,9 +24,9 @@ resource "google_compute_network_peering" "local_network_peering" {
   depends_on = [null_resource.module_depends_on]
 }
 
-#####==============================================================================
-##### Manages a network peering within GCE.
-#####==============================================================================
+#--------------------------------------------------------------------------------
+# Manages a network peering within GCE.
+#--------------------------------------------------------------------------------
 resource "google_compute_network_peering" "peer_network_peering" {
   count                = var.peering_enabled ? 1 : 0
   name                 = format("%s-peering-%s", var.vpc_2_name, var.vpc_1_name)
