@@ -21,3 +21,5 @@ module "peering" {
   local_network = data.google_compute_network.my-network.self_link
   peer_network  = data.google_compute_network.my-network1.self_link
 }
+
+

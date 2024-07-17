@@ -20,7 +20,7 @@ To use this module, you should have Terraform installed and configured for GCP. 
 
 ```hcl
 module "peering" {
-  source        = "https://github.com/opsstation/terraform-gcp-vpc-peering.git"
+  source        = "https://github.com/yadavprakash/terraform-gcp-vpc-peering.git"
   vpc_1_name    = "test-vpc"
   vpc_2_name    = "test-vpc2"
   local_network = data.google_compute_network.my-network.self_link
@@ -44,14 +44,14 @@ This example demonstrates how to create various GCP resources using the provided
 - This module currently does not provide any outputs.
 
 # Examples
-For detailed examples on how to use this module, please refer to the [example](https://github.com/opsstation/terraform-gcp-vpc-peering/tree/master/_example) directory within this repository.
+For detailed examples on how to use this module, please refer to the [example](https://github.com/yadavprakash/terraform-gcp-vpc-peering/tree/master/_example) directory within this repository.
 
 ## Authors
 Your Name
 Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/opsstation/terraform-gcp-vpc-peering/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/yadavprakash/terraform-gcp-vpc-peering/blob/master/LICENSE) file for details.
 
 
 
